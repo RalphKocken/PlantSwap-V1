@@ -1,0 +1,346 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --main-ambiance-background-color: #E5F6DF;
+  --title-text-color: #654321;
+  --main-text-font: 'PT Sans', sans-serif;
+}
+
+/* FONT SIZES */
+
+.title-text-big{
+  font-size: 40px;
+}
+
+.subtitle-text-regular{
+  font-size: 28px;
+}
+
+.subtitle-text-small{
+  font-size: 24px;
+}
+
+@font-face{
+  font-family: Positive Attitude;
+  src: url('../assets/fonts/PositiveAttitude.ttf')
+}
+
+/* utilities */
+
+.ambiance-utility{
+  background-color: var(--main-ambiance-background-color);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.subtitle-utility{
+  color: var(--title-text-color);
+  border-bottom: 1px solid var(--title-text-color);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.text-box{
+  padding: 0.5rem;
+  background-color:rgba(255, 255, 255, 0.7);
+}
+
+/* body */
+
+body{
+  font-family: var(--main-text-font);
+}
+
+/* nav */
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1rem 0 1rem;
+}
+
+.nav-plantswap-logo{
+  width: 10rem;
+}
+
+/* header */
+
+.homepage-images{
+  margin: 0 auto 0 auto;
+  width: 100%;
+  height: 16rem;
+  position: relative;
+}
+
+.homepage-image{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  opacity: 0;
+  transition: 1s ease-in-out;
+  border-radius: 180px 180px 0px 180px;
+}
+
+.show-homepage-image{
+  opacity: 1;
+}
+
+.banner{
+  position: relative;
+  font-family: Positive Attitude;
+  display: flex;
+  flex-direction: column;
+  color: var(--title-text-color);
+  width: 100%;
+  max-width: 35rem;
+  margin: 0 auto;
+  padding: 2rem 4rem;
+  overflow: hidden;
+}
+
+.banner-line-1{
+  font-size: 40px;
+  margin: 0 auto 0 0;
+}
+
+.banner-line-2{
+  font-size: 64px;
+  font-weight: 700;
+  margin: 0 auto 0 auto;
+}
+
+.banner-line-3{
+  font-size: 40px;
+  margin: 0 0 0 auto;
+}
+
+.banner-background-field{
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  left: 30%;
+  z-index: -1;
+  transform: translateX(-100px) translateY(50px) rotate(-50deg);
+  border-radius: 90px;
+}
+
+.useage{
+  padding: 0 1rem;
+  max-width: 35rem;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.useage-wrapper{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+
+/* plant list */
+
+.plant-list-container{
+  position: relative;
+  margin: 2rem 0 0 0;
+  overflow: hidden;
+}
+
+.plant-list-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  height: 5rem;
+  background-color: var(--main-ambiance-background-color);
+  border-radius: 100px 0 0 0;
+}
+
+.plant-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 2rem;
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+.plant-link{
+  width: 40%;
+  max-width: 13.5rem;
+  text-decoration: none;
+  color: var(--title-text-color);
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  border-radius: 8px;
+}
+
+.plant-image{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.plant-title{
+  width: 100%;
+  padding: 0.5rem;
+  height: 4.5rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 0 0 8px 8px;
+}
+
+.plant-list-ambiance-field{
+  z-index: -1;
+  position: absolute;
+  width: 110%;
+  height: 10%;
+  top: 0;
+  transform: rotate(-8deg) translateY(20px) translateX(-30px);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;}
+
+.plaf-2{
+  top: 20%;
+}
+
+.plaf-3{
+  top: 40%
+}
+
+.plaf-4{
+  top: 60%;
+}
+
+.plaf-5{
+  top: 80%;
+}
+
+/* general information */
+
+.general-information{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem 1rem;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.general-information > section{
+  width: 100%;
+  max-width: 20rem;
+}
+
+.buurtcampus-googlemaps > iframe{
+  margin: 1rem 0 0 0;
+}
+
+.general-information-ambiance-field{
+  position: absolute;
+  z-index: -1;
+  background-color: var(--main-ambiance-background-color);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.giaf-1{
+  top: 20%;
+  left: -100px;
+}
+
+.giaf-2{
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  right: -150px;
+}
+
+.giaf-3{
+  top: 80%;
+  left: -100px;
+}
+
+/* footer */
+
+footer{
+  margin: 2rem auto;
+  width: 90%;
+}
+
+footer > img{
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px){
+
+  .plant-list{
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 1rem 2rem 2rem 3rem;
+  }
+
+  .useage{
+    background-color:rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+  }
+  .plant-image{
+    min-width: 11.5rem;
+  }
+
+  .plaf-1{
+    height: 470px;
+    width: 200%;
+    transform: rotate(-35deg);
+    left: -610px;
+  }
+
+  .plaf-2, .plaf-3, .plaf-4, .plaf-5{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px){
+  .homepage-images{
+    width: 90%;
+  }
+
+  .banner{
+    padding: 0rem 6rem;
+  }
+
+  .banner-line-1{
+    font-size: 80px;
+  }
+  .banner-line-2{
+    font-size: 120px;
+  }
+  .banner-line-3{
+    font-size: 80px;
+  }
+
+  .banner-background-field{
+    top: 0;
+    left: 40%;
+  }
+
+  .useage-wrapper{
+    padding: 3rem 0 0 0;
+    flex-direction: row;
+  }
+
+  .plant-list-container{
+    margin: 4rem;
+  }
+
+}
